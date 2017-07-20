@@ -8,18 +8,13 @@
 </head>
 <body>
 <h1>Welcome to Employee Portal</h1>
-<form action="/Shubham/main/login.html" method = "Post">
+<form action="/Shubham/main/register.html" method = "Post">
 <table>
-<tr><td><p>Enter your Email / Employee Id : </p></td><td><p><input type="text" name="userID"/></p></td></tr>
+<tr><td><p>Enter your Name : </p></td><td><p><input type="text" name="userName"/></p></td></tr>
+<tr><td><p>Enter your Email : </p></td><td><p><input type="text" name="userID"/></p></td></tr>
 <tr><td><p>Enter your Password : </p></td><td><p><input type="Password" name="password"/></p></td></tr>
-<tr><td><input type="submit" value="Log In"/></td></tr>
-</table>
-</form>
-<form action="/Shubham/main/RegisterForm.html" method = "Get">
-<table>
 <tr><td><input type="submit" value="Register"/></td></tr>
 </table>
 </form>
 </body>
 </html>
-

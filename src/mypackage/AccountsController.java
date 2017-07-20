@@ -15,7 +15,7 @@ import sun.security.util.Password;
 public class AccountsController {
 
 	@RequestMapping(value = "/loginform.html", method = RequestMethod.GET)
-    public ModelAndView getAdmissionForm() {
+    public ModelAndView getLogInForm() {
 
         ModelAndView modelandview = new ModelAndView("LogInForm");
         //modelandview.addObject("headerMsg", "Admission Form");
@@ -30,7 +30,7 @@ public class AccountsController {
 //	}
 	
 	@RequestMapping(value = "/login.html", method = RequestMethod.POST)
-	public ModelAndView submitAdmissionForm(@RequestParam("userID") String userID, @RequestParam("password") String password) {
+	public ModelAndView submitLogInForm(@RequestParam("userID") String userID, @RequestParam("password") String password) {
 	//public ModelAndView submitAdmissionForm(@ModelAttribute("empObj") Employee emp) {
 		Employee emp = new Employee();
 		emp.setUserID(userID);
@@ -39,6 +39,23 @@ public class AccountsController {
         ModelAndView modelandview = new ModelAndView("LogInSuccess");
         //modelandview.addObject("empObj", emp);
         modelandview.addObject("message", "Hello "+ emp.getUserID());
+        return modelandview;
+    }
+	
+	@RequestMapping(value = "/RegisterForm.html", method = RequestMethod.GET)
+    public ModelAndView getRegisterForm() {
+
+        ModelAndView modelandview = new ModelAndView("RegistrationForm");
+        //modelandview.addObject("headerMsg", "Admission Form");
+
+        return modelandview;
+    }
+	@RequestMapping(value = "/register.html", method = RequestMethod.POST)
+    public ModelAndView getRegistered() {
+
+        ModelAndView modelandview = new ModelAndView("RegistrationSuccess");
+        //modelandview.addObject("headerMsg", "Admission Form");
+
         return modelandview;
     }
 }
